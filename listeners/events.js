@@ -62,16 +62,9 @@ module.exports = controller => {
         }
     });
 
-    controller.on('onboard', (bot, team) => {
-        console.log('on board team...');
-        console.dir(team);
-        bot.api.conversations.open(
-            { 
-                user: team.bot.user_id,
-                token : team.bot.token
+    controller.on('onboard', bot => {
 
-            }, 
-            (err, convo) => {
+        bot.startPrivateConversation({ user: bot.config.createdBy }, (err, convo) => {
 
             if (err) {
                 logger.log(err);
@@ -112,8 +105,6 @@ module.exports = controller => {
     });
 
     controller.on('oauth_success', auth => {
-        console.log('team id');
-        console.log(auth.identity.team_id);
         controller.storage.teams.get(auth.identity.team_id, (err, team) => {
             let isNew = false;
 
@@ -126,10 +117,8 @@ module.exports = controller => {
                     is_migrating: false
                 };
                 isNew = true;
-                console.log('team not found... new team');
-                console.dir(team);
             }
-            
+
             team.bot = {
                 //##old way of getting token
                 //token: auth.bot.bot_access_token,
