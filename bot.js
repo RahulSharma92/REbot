@@ -31,7 +31,6 @@ let botCfg = {
         'groups:read', 
         'groups:write', 
         'groups:history',
-        'chat:write',
         'app_mentions:read',
         'commands'
 
