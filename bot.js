@@ -32,8 +32,7 @@ let botCfg = {
         'groups:write', 
         'groups:history',
         'app_mentions:read',
-        'commands',
-        'chat:write'
+        'commands'
 
     ],
     storage: mongoProvider,
