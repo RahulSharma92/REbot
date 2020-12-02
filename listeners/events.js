@@ -105,6 +105,8 @@ module.exports = controller => {
     });
 
     controller.on('oauth_success', auth => {
+        console.log('team id');
+        console.log(auth.identity.team_id);
         controller.storage.teams.get(auth.identity.team_id, (err, team) => {
             let isNew = false;
 
@@ -117,8 +119,10 @@ module.exports = controller => {
                     is_migrating: false
                 };
                 isNew = true;
+                console.log('team not found... new team');
+                console.dir(team);
             }
-
+            
             team.bot = {
                 //##old way of getting token
                 //token: auth.bot.bot_access_token,
