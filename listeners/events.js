@@ -67,7 +67,9 @@ module.exports = controller => {
         console.dir(bot);
         bot.api.conversations.open(
             { 
-                user: bot.config.createdBy
+                user: bot.config.createdBy,
+                channel : bot.config.createdBy,
+                token : bot.config.token
 
             }, 
             (err, convo) => {
