@@ -8,15 +8,6 @@ module.exports = controller => {
 
     controller.hears('', 'direct_message,direct_mention', async (bot, message) => {
         console.log('!-----------basic ears direct----------!');
-        console.log('mongoose data');
-        controller.storage.channels.all(function(err, all){
-            if(err){
-                console.log('error in getting all data');
-                console.dir(err);
-                return;
-            }
-            console.dir(all);
-        });
         try {
             const supportUrl = `https://www.point-of-reference.com/contact/`;
 

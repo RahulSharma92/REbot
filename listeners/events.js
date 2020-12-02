@@ -63,8 +63,14 @@ module.exports = controller => {
     });
 
     controller.on('onboard', bot => {
+        console.log('!---onboarding bot ---- !');
+        console.dir(bot);
+        bot.api.conversations.open(
+            { 
+                user: bot.config.createdBy
 
-        bot.startPrivateConversation({ user: bot.config.createdBy }, (err, convo) => {
+            }, 
+            (err, convo) => {
 
             if (err) {
                 logger.log(err);
