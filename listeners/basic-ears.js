@@ -8,6 +8,7 @@ module.exports = controller => {
 
     controller.hears('', 'direct_message,direct_mention', async (bot, message) => {
         console.log('!-----------basic ears direct----------!');
+        console.dir(message);
         try {
             const supportUrl = `https://www.point-of-reference.com/contact/`;
 
