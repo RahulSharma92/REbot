@@ -62,14 +62,13 @@ module.exports = controller => {
         }
     });
 
-    controller.on('onboard', bot => {
-        console.log('!---onboarding bot ---- !');
-        console.dir(bot);
+    controller.on('onboard', (bot, team) => {
+        console.log('on board team...');
+        console.dir(team);
         bot.api.conversations.open(
             { 
-                user: bot.config.createdBy,
-                channel : bot.config.createdBy,
-                token : bot.config.token
+                user: team.bot.user_id,
+                token : team.bot.token
 
             }, 
             (err, convo) => {
