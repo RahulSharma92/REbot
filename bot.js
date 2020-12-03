@@ -21,7 +21,7 @@ let botCfg = {
         'users:read.email',// To find users based on email address and send messages to them
         //'users:write', 
         //'channels:write',
-        'channels:history',// To view messages of the channels in which ReferencEedge is added.
+        //'channels:history',// To view messages of the channels in which ReferencEedge is added.
         //'im:read',
         'im:write',
         //'users.profile:read',
