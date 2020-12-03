@@ -19,20 +19,9 @@ let botCfg = {
         'team:read',//To read the Id and domain name information for the Workspace
         'users:read',//To read the email address of the users in the Workspace.
         'users:read.email',// To find users based on email address and send messages to them
-        //'users:write', 
-        //'channels:write',
         'channels:history',// To view messages of the channels in which ReferencEedge is added.
-        //'im:read',
-        'im:write',
-        //'users.profile:read',
+        'im:write', //This is required for having conversation with bot user. Specially when bot starts conversation after app installation.
         'im:history',//This is automatically selected and can not be removed.
-        //'mpim:read', 
-        //'mpim:write', 
-        //'groups:read', 
-        //'groups:write', 
-        //'groups:history',
-        //'app_mentions:read',//Bot should reply when it is referenced using @rebot.
-        //'commands',
         'chat:write'//Bot User does not reply to message with this scope.
 
     ],
