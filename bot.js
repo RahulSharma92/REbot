@@ -26,8 +26,8 @@ let botCfg = {
         'im:write',
         'users.profile:read',
         'im:history',//This is automatically selected and can not be removed.
-        'mpim:read', 
-        'mpim:write', 
+        //'mpim:read', 
+        //'mpim:write', 
         //'groups:read', 
         //'groups:write', 
         //'groups:history',
