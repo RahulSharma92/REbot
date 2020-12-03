@@ -28,8 +28,8 @@ let botCfg = {
         'im:history',//This is automatically selected and can not be removed.
         'mpim:read', 
         'mpim:write', 
-        'groups:read', 
-        'groups:write', 
+        //'groups:read', 
+        //'groups:write', 
         //'groups:history',
         'app_mentions:read',//Bot should reply when it is referenced using @rebot.
         //'commands',
