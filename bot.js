@@ -30,7 +30,7 @@ let botCfg = {
         'mpim:write', 
         'groups:read', 
         'groups:write', 
-        'groups:history',
+        //'groups:history',
         'app_mentions:read',//Bot should reply when it is referenced using @rebot.
         //'commands',
         'chat:write'//Bot User does not reply to message with this scope.
