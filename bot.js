@@ -19,7 +19,7 @@ let botCfg = {
         'team:read',//To read the Id and domain name information for the Workspace
         'users:read',//To read the email address of the users in the Workspace.
         'users:read.email',// To find users based on email address and send messages to them
-        'users:write', 
+        //'users:write', 
         //'channels:write',
         'channels:history',// To view messages of the channels in which ReferencEedge is added.
         //'im:read',
