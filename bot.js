@@ -24,7 +24,7 @@ let botCfg = {
         'channels:history',// To view messages of the channels in which ReferencEedge is added.
         'im:read',
         'im:write',
-        'users.profile:read',
+        //'users.profile:read',
         'im:history',//This is automatically selected and can not be removed.
         //'mpim:read', 
         //'mpim:write', 
